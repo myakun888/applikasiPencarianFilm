@@ -16,12 +16,12 @@ class api {
         // console.log(film);
         let x=""
         film.forEach(e => {
-          x+= `<div class="card mt-3 me-1" style="width: 14rem">
+          x+= `<div class="card mt-3 me-1" style="width: 16rem">
           <img src="${e.Poster}" class="card-img-top" alt="..." />
            <ul class="list-group list-group-flush">
             <li class="list-group-item fw-bolder">${e.Title}</li>
             <li class="list-group-item">${e.Year}</li>
-            <li class="list-group-item">A third item</li>
+          
           </ul>
         </div>`
 
@@ -32,7 +32,8 @@ class api {
         let wadah = document.getElementById("pembungkus")
         wadah.innerHTML=x
 
-      });
+      })
+      .catch((response)=>{ alert(" judul yang anda cari belum tersedia di server kami\n silahkan cari judul lain")})
   }
 }
 
